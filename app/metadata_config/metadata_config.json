@@ -1,0 +1,10 @@
+{
+  "credential_issuer": "https://edim-demo-issuer-dev.example.lv",
+  "credential_endpoint": "https://edim-demo-issuer-dev.example.lv/credential",
+  "batch_credential_endpoint": "https://edim-demo-issuer-dev.example.lv/batch_credential",
+  "notification_endpoint": "https://edim-demo-issuer-dev.example.lv/notification",
+  "deferred_credential_endpoint": "https://edim-demo-issuer-dev.example.lv/deferred_credential",
+  "credential_configurations_supported": {
+
+  }
+}

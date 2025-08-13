@@ -1,0 +1,124 @@
+{
+    "eu.europa.ec.eudi.iban_mdoc": {
+        "format": "mso_mdoc",
+        "doctype": "eu.europa.ec.eudi.iban",
+        "scope": "eu.europa.ec.eudi.iban",
+        "policy": {
+            "batch_size": 50,
+            "one_time_use": true
+        },
+        "cryptographic_binding_methods_supported": [
+            "jwk",
+            "cose_key"
+        ],
+        "credential_alg_values_supported": [
+            -7
+        ],
+        "credential_crv_values_supported": [
+            1
+        ],
+        "credential_signing_alg_values_supported": [
+            "ES256"
+        ],
+        "proof_types_supported": {
+            "jwt": {
+                "proof_signing_alg_values_supported": [
+                    "ES256"
+                ]
+            },
+            "cwt": {
+                "proof_signing_alg_values_supported": [
+                    "ES256"
+                ],
+                "proof_alg_values_supported": [
+                    -7
+                ],
+                "proof_crv_values_supported": [
+                    1
+                ]
+            }
+        },
+        "display": [
+            {
+                "name": "IBAN",
+                "locale": "en"
+            }
+        ],
+        "claims": {
+            "eu.europa.ec.eudi.iban": {
+                "sub": {
+                    "mandatory": true,
+                    "value_type": "string",
+                    "source": "user",
+                    "display": [
+                        {
+                            "name": "IBAN",
+                            "locale": "en"
+                        }
+                    ]
+                },
+                "id": {
+                    "mandatory": true,
+                    "source": "issuer",
+                    "display": [
+                        {
+                            "name": "A2Pay Identifier",
+                            "locale": "en"
+                        }
+                    ]
+                },
+                "scheme": {
+                    "mandatory": false,
+                    "value_type": "string",
+                    "source": "user",
+                    "display": [
+                        {
+                            "name": "Account Scheme",
+                            "locale": "en"
+                        }
+                    ]
+                },
+                "psp": {
+                    "mandatory": false,
+                    "source": "issuer",
+                    "display": [
+                        {
+                            "name": "PSP Identifier",
+                            "locale": "en"
+                        }
+                    ]
+                },
+                "issuance_date": {
+                    "mandatory": true,
+                    "source": "issuer",
+                    "display": [
+                        {
+                            "name": "Issuance Date",
+                            "locale": "en"
+                        }
+                    ]
+                },
+                "expiry_date": {
+                    "mandatory": true,
+                    "source": "issuer",
+                    "display": [
+                        {
+                            "name": "Expiry Date",
+                            "locale": "en"
+                        }
+                    ]
+                },
+                "jti": {
+                    "mandatory": false,
+                    "source": "issuer",
+                    "display": [
+                        {
+                            "name": "Credential Identifier",
+                            "locale": "en"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

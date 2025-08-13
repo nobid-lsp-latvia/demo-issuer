@@ -1,0 +1,538 @@
+{
+  "eu.europa.ec.eudi.mdl_mdoc": {
+    "format": "mso_mdoc",
+    "doctype": "org.iso.18013.5.1.mDL",
+    "scope": "org.iso.18013.5.1.mDL",
+    "cryptographic_binding_methods_supported": ["jwk", "cose_key"],
+    "credential_signing_alg_values_supported": ["ES256"],
+    "proof_types_supported": {
+      "jwt": {
+        "proof_signing_alg_values_supported": ["ES256"]
+      },
+      "cwt": {
+        "proof_signing_alg_values_supported": ["ES256"],
+        "proof_alg_values_supported": [-7],
+        "proof_crv_values_supported": [1]
+      }
+    },
+    "display": [
+      {
+        "name": "mDL",
+        "locale": "en",
+        "logo": {
+          "url": "https://examplestate.com/public/mdl.png",
+          "alt_text": "A square figure of a mDL"
+        }
+      },
+      {
+        "name": "mDL",
+        "locale": "lv",
+        "logo": {
+          "url": "https://examplestate.com/public/mdl.png",
+          "alt_text": "mDL"
+        }
+      }
+    ],
+    "claims": {
+      "org.iso.18013.5.1": {
+        "family_name": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Family name",
+              "locale": "en"
+            },
+            {
+              "name": "Uzvārds",
+              "locale": "lv"
+            }
+          ]
+        },
+        "given_name": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Given names",
+              "locale": "en"
+            },
+            {
+              "name": "Vārds",
+              "locale": "lv"
+            }
+          ]
+        },
+        "birth_date": {
+          "mandatory": true,
+          "value_type": "full-date",
+          "source": "user",
+          "display": [
+            {
+              "name": "Date of birth",
+              "locale": "en"
+            },
+            {
+              "name": "Dzimšanas datums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "personal_administrative_number": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Person unique personal administrative number",
+              "locale": "en"
+            },
+            {
+              "name": "Personas kods",
+              "locale": "lv"
+            }
+          ]
+        },
+        "issue_date": {
+          "mandatory": true,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Date of issue",
+              "locale": "en"
+            },
+            {
+              "name": "Izsniegšanas datums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "expiry_date": {
+          "mandatory": true,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Date when mDL expires",
+              "locale": "en"
+            },
+            {
+              "name": "Derīguma termiņš",
+              "locale": "lv"
+            }
+          ]
+        },
+        "issuing_country": {
+          "mandatory": true,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Issuing country",
+              "locale": "en"
+            },
+            {
+              "name": "Izsniedzēja valsts",
+              "locale": "lv"
+            }
+          ]
+        },
+        "issuing_authority": {
+          "mandatory": true,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Issuing authority",
+              "locale": "en"
+            },
+            {
+              "name": "Datu izdevējs",
+              "locale": "lv"
+            }
+          ]
+        },
+        "document_number": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Licence number",
+              "locale": "en"
+            },
+            {
+              "name": "Apliecības numurs",
+              "locale": "lv"
+            }
+          ]
+        },
+        "portrait": {
+          "mandatory": true,
+          "value_type": "jpeg",
+          "source": "user",
+          "display": [
+            {
+              "name": "Portrait of mDL holder",
+              "locale": "en"
+            },
+            {
+              "name": "Turētāja bilde",
+              "locale": "lv"
+            }
+          ]
+        },
+        "driving_privileges": {
+          "mandatory": true,
+          "value_type": "driving_privileges",
+          "source": "user",
+          "display": [
+            {
+              "name": "Categories of vehicles",
+              "locale": "en"
+            },
+            {
+              "name": "Iegūtās kategorijas",
+              "locale": "lv"
+            }
+          ]
+        },
+        "un_distinguishing_sign": {
+          "mandatory": true,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "UN distinguishing sign",
+              "locale": "en"
+            },
+            {
+              "name": "ANO atšķirības zīme",
+              "locale": "lv"
+            }
+          ]
+        },
+        "administrative_number": {
+          "mandatory": false,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Administrative number",
+              "locale": "en"
+            },
+            {
+              "name": "Administratīvais numurs",
+              "locale": "lv"
+            }
+          ]
+        },
+        "sex": {
+          "mandatory": false,
+          "source": "user",
+          "value_type": "uint",
+          "display": [
+            {
+              "name": "Sex",
+              "locale": "en"
+            },
+            {
+              "name": "Dzimums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "height": {
+          "mandatory": false,
+          "source": "user",
+          "value_type": "uint",
+          "display": [
+            {
+              "name": "Height (cm)",
+              "locale": "en"
+            },
+            {
+              "name": "Garums (cm)",
+              "locale": "lv"
+            }
+          ]
+        },
+        "weight": {
+          "mandatory": false,
+          "source": "user",
+          "value_type": "uint",
+          "display": [
+            {
+              "name": "Weight (kg)",
+              "locale": "en"
+            },
+            {
+              "name": "Svars (kg)",
+              "locale": "lv"
+            }
+          ]
+        },
+        "eye_colour": {
+          "mandatory": false,
+          "source": "user",
+          "value_type": "string",
+          "display": [
+            {
+              "name": "Eye colour",
+              "locale": "en"
+            },
+            {
+              "name": "Acu krāsa",
+              "locale": "lv"
+            }
+          ]
+        },
+        "hair_colour": {
+          "mandatory": false,
+          "source": "user",
+          "value_type": "string",
+          "display": [
+            {
+              "name": "Hair colour",
+              "locale": "en"
+            },
+            {
+              "name": "Matu krāsa",
+              "locale": "lv"
+            }
+          ]
+        },
+        "birth_place": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Place of birth",
+              "locale": "en"
+            },
+            {
+              "name": "Dzimšanas valsts",
+              "locale": "lv"
+            }
+          ]
+        },
+        "resident_address": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Permanent place of residence",
+              "locale": "en"
+            },
+            {
+              "name": "Dzīves vietas adrese",
+              "locale": "lv"
+            }
+          ]
+        },
+        "portrait_capture_date": {
+          "mandatory": false,
+          "value_type": "full-date",
+          "source": "user",
+          "display": [
+            {
+              "name": "Portrait image timestamp",
+              "locale": "en"
+            },
+            {
+              "name": "Turētāja bildes uzņemšanas laiks",
+              "locale": "lv"
+            }
+          ]
+        },
+        "age_in_years": {
+          "mandatory": false,
+          "value_type": "uint",
+          "source": "user",
+          "display": [
+            {
+              "name": "Age attestation: How old are you (in years)?",
+              "locale": "en"
+            },
+            {
+              "name": "Vecums gados",
+              "locale": "lv"
+            }
+          ]
+        },
+        "age_birth_year": {
+          "mandatory": false,
+          "value_type": "uint",
+          "source": "user",
+          "display": [
+            {
+              "name": "Age attestation: In what year were you born?",
+              "locale": "en"
+            },
+            {
+              "name": "Dzimšanas gads",
+              "locale": "lv"
+            }
+          ]
+        },
+        "age_over_18": {
+          "mandatory": false,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Age attestation: Nearest “true” attestation above request",
+              "locale": "en"
+            },
+            {
+              "name": "Vecāks par 18",
+              "locale": "lv"
+            }
+          ]
+        },
+        "Issuing jurisdiction": {
+          "mandatory": false,
+          "display": [
+            {
+              "name": "Issuing jurisdiction",
+              "locale": "en"
+            },
+            {
+              "name": "Izsniedzēja jurisdikcija",
+              "locale": "lv"
+            }
+          ]
+        },
+        "nationality": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Nationality",
+              "locale": "en"
+            },
+            {
+              "name": "Valstspiederība",
+              "locale": "lv"
+            }
+          ]
+        },
+        "resident_city": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Resident city",
+              "locale": "en"
+            },
+            {
+              "name": "Dzīves vietas pilsēta",
+              "locale": "lv"
+            }
+          ]
+        },
+        "resident_state": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Resident state/province/district",
+              "locale": "en"
+            },
+            {
+              "name": "Dzīves vietas rajons",
+              "locale": "lv"
+            }
+          ]
+        },
+        "resident_postal_code": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Resident postal code",
+              "locale": "en"
+            },
+            {
+              "name": "Dzīves vietas pasta indekss",
+              "locale": "lv"
+            }
+          ]
+        },
+        "resident_country": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Resident country",
+              "locale": "en"
+            },
+            {
+              "name": "Dzīves vietas valsts",
+              "locale": "lv"
+            }
+          ]
+        },
+        "biometric_template_xx": {
+          "mandatory": false,
+          "display": [
+            {
+              "name": "Fingerprint biometric information",
+              "locale": "en"
+            },
+            {
+              "name": "Pirkstu nospiedumu biometriskā informācija",
+              "locale": "lv"
+            }
+          ]
+        },
+        "family_name_national_character": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Family name in national characters",
+              "locale": "en"
+            },
+            {
+              "name": "Uzvārds nacionālā pierakstā",
+              "locale": "lv"
+            }
+          ]
+        },
+        "given_name_national_character": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Given name in national characters",
+              "locale": "en"
+            },
+            {
+              "name": "Vārds nacionālā pierakstā",
+              "locale": "lv"
+            }
+          ]
+        },
+        "signature_usual_mark": {
+          "mandatory": false,
+          "display": [
+            {
+              "name": "Signature / usual mark",
+              "locale": "en"
+            },
+            {
+              "name": "Paraksts",
+              "locale": "lv"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

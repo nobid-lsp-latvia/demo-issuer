@@ -1,0 +1,336 @@
+{
+  "eu.europa.ec.eudi.rtu_diploma_mdoc": {
+    "format": "mso_mdoc",
+    "doctype": "eu.europa.ec.eudi.rtu_diploma_mdoc",
+    "scope": "eu.europa.ec.eudi.rtu_diploma_mdoc",
+    "cryptographic_binding_methods_supported": ["jwk", "cose_key"],
+    "credential_signing_alg_values_supported": ["ES256"],
+    "proof_types_supported": {
+      "jwt": {
+        "proof_signing_alg_values_supported": ["ES256"]
+      },
+      "cwt": {
+        "proof_signing_alg_values_supported": ["ES256"],
+        "proof_alg_values_supported": [-7],
+        "proof_crv_values_supported": [1]
+      }
+    },
+    "display": [
+      {
+        "name": "Diploma",
+        "locale": "en",
+        "logo": {
+          "url": "https://examplestate.com/public/diploma.png",
+          "alt_text": "A square figure of a Diploma"
+        }
+      },
+      {
+        "name": "Diploma",
+        "locale": "lv",
+        "logo": {
+          "url": "https://examplestate.com/public/diploma.png",
+          "alt_text": "A square figure of a Diploma"
+        }
+      }
+    ],
+    "claims": {
+      "eu.europa.ec.eudi.rtu_diploma_mdoc": {
+        "givenName": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "The given name(s) of the person",
+              "locale": "en"
+            },
+            {
+              "name": "Vārds",
+              "locale": "lv"
+            }
+          ]
+        },
+        "familyName": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "The family name of the person",
+              "locale": "en"
+            },
+            {
+              "name": "Uzvārds",
+              "locale": "lv"
+            }
+          ]
+        },
+        "nationalID": {
+          "mandatory": true,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "The national identifier of the person",
+              "locale": "en"
+            },
+            {
+              "name": "Personas nacionālais identifikators",
+              "locale": "lv"
+            }
+          ]
+        },
+        "citizenshipCountryCode": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Citizenship country code",
+              "locale": "en"
+            },
+            {
+              "name": "Valstspiederības valsts kods",
+              "locale": "lv"
+            }
+          ]
+        },
+        "type": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "The type of credential",
+              "locale": "en"
+            },
+            {
+              "name": "Apliecinājuma tips",
+              "locale": "lv"
+            }
+          ]
+        },
+        "title": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Achievement title",
+              "locale": "en"
+            },
+            {
+              "name": "Sasnieguma nosaukums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "awardingDate": {
+          "mandatory": false,
+          "source": "user",
+          "display": [
+            {
+              "name": "Awarding date",
+              "locale": "en"
+            },
+            {
+              "name": "Piešķiršanas datums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "awardingBody_legalName": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Awarded by",
+              "locale": "en"
+            },
+            {
+              "name": "Piešķīrējs",
+              "locale": "lv"
+            }
+          ]
+        },
+        "awardingBody_registration": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "issuer",
+          "display": [
+            {
+              "name": "The legal identifier of the awarding body",
+              "locale": "en"
+            },
+            {
+              "name": "Piešķīrēja juridiskais identifikators",
+              "locale": "lv"
+            }
+          ]
+        },
+        "awardingBody_countryCode": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Awarding body country code",
+              "locale": "en"
+            },
+            {
+              "name": "Piešķīrēja valsts kods",
+              "locale": "lv"
+            }
+          ]
+        },
+        "creditPoint": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "ECTS",
+              "locale": "en"
+            },
+            {
+              "name": "ECTS",
+              "locale": "lv"
+            }
+          ]
+        },
+        "creditValue": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Credit system",
+              "locale": "en"
+            },
+            {
+              "name": "Kredītpunktu sistēma",
+              "locale": "lv"
+            }
+          ]
+        },
+        "maximumDuration": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Maximum duration in months",
+              "locale": "en"
+            },
+            {
+              "name": "Maksimālais ilgums mēnešos",
+              "locale": "lv"
+            }
+          ]
+        },
+        "thematicArea": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "Thematic area",
+              "locale": "en"
+            },
+            {
+              "name": "Tematiskā joma",
+              "locale": "lv"
+            }
+          ]
+        },
+        "nqfLevel": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "NQF level",
+              "locale": "en"
+            },
+            {
+              "name": "NKI līmenis",
+              "locale": "lv"
+            }
+          ]
+        },
+        "eqfLevel": {
+          "mandatory": false,
+          "value_type": "string",
+          "source": "user",
+          "display": [
+            {
+              "name": "EQF level",
+              "locale": "en"
+            },
+            {
+              "name": "EKI līmenis",
+              "locale": "lv"
+            }
+          ]
+        },
+        "validFrom": {
+          "mandatory": false,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Valid from",
+              "locale": "en"
+            },
+            {
+              "name": "Derīgs no",
+              "locale": "lv"
+            }
+          ]
+        },
+        "issuanceDate": {
+          "mandatory": false,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Issuance date",
+              "locale": "en"
+            },
+            {
+              "name": "Izsniegšanas datums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "issued": {
+          "mandatory": false,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Issuance date",
+              "locale": "en"
+            },
+            {
+              "name": "Izsniegšanas datums",
+              "locale": "lv"
+            }
+          ]
+        },
+        "issuing_authority": {
+          "mandatory": true,
+          "source": "issuer",
+          "display": [
+            {
+              "name": "Issuing authority",
+              "locale": "en"
+            },
+            {
+              "name": "Datu izdevējs",
+              "locale": "lv"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
